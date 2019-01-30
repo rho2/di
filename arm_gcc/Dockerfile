@@ -14,3 +14,5 @@ RUN wget -q -O gcc.tar.bz2 https://developer.arm.com/-/media/Files/downloads/gnu
     && rm -rf /home/dev/gcc/share/doc \
     && rm -rf /home/dev/gcc/share/gcc-arm-none-eabi/samples
 ENV PATH="/home/dev/gcc/bin:${PATH}"
+
+ENTRYPOINT ["arm-none-eabi-gcc"]
